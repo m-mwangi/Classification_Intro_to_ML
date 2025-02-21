@@ -1,7 +1,7 @@
 # **Maternal Health Risk Prediction (Matern_AI)**  
 
 ## 📌 Introduction  
-This project aims to develop and compare a **vanilla Neural Network model** to a model incorporating **optimization techniques** as well as **Classical Algorithms** to predict **maternal health risk** among pregnant women as either **low, mid, or high risk**.  
+This project aims to develop and compare a vanilla Neural Network model to a model incorporating optimization techniques as well as Classical Algorithms to predict maternal health risk among pregnant women as either low, mid, or high risk.  
 
 ## 📂 About the Dataset  
 The dataset used for this model is publicly available on Kaggle:  
@@ -18,26 +18,26 @@ The dataset used for this model is publicly available on Kaggle:
 ## 🔍 Data Cleaning & Preprocessing  
 1. **Handling Missing and Duplicate Data**  
    - No missing values were found in the dataset.  
-   - **562 duplicate rows** were identified and removed to enhance model accuracy.  
+   - 562 duplicate rows were identified and removed to enhance model accuracy.  
 
 2. **Outlier Detection & Correction**  
-   - An unrealistic **HeartRate value of 7** was detected and replaced with the mode (**70 bpm**).  
+   - An unrealistic HeartRate value of 7 was detected and replaced with the mode (70 bpm).  
 
 3. **Encoding Categorical Variables**  
-   - The **Risk Level** variable was encoded as follows:  
+   - The Risk Level variable was encoded as follows:  
      - `2` → High Risk  
      - `1` → Mid Risk  
      - `0` → Low Risk  
 
 4. **Feature Correlation Analysis**  
-   - A **correlation heatmap** revealed that **Blood Sugar (BS)** had the strongest positive correlation with **Risk Level** (**0.55**).  
-   - **Age** and **HeartRate** showed weaker correlations but were retained as features.  
+   - A correlation heatmap revealed that Blood Sugar (BS) had the strongest positive correlation with Risk Level (0.55).  
+   - Age and HeartRate showed weaker correlations but were retained as features.  
 
 5. **Handling Class Imbalance**  
    - **Class distribution after dropping duplicate rows:**  
-     - **234** Low-Risk cases  
-     - **106** Mid-Risk cases  
-     - **112** High-Risk cases  
+     - 234 Low-Risk cases  
+     - 106 Mid-Risk cases  
+     - 112 High-Risk cases  
    - The imbalance was addressed through data scaling and appropriate model selection.  
 
 6. **Data Splitting & Scaling**  
