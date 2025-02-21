@@ -1,28 +1,46 @@
-** Maternal Health Risk Prediction Model**
+# **Maternal Health Risk Prediction (Matern_AI)**  
 
-Introduction
-The project aims to develop and compare a vanilla Neural network model to a model that uses optimization techniques to predict maternal risk as either low, mid, or high risk.
+## 📌 Introduction  
+This project aims to develop and compare a **vanilla Neural Network model** to a model incorporating **optimization techniques** as well as **Classical Algorithms** to predict **maternal health risk** among pregnant women as either **low, mid, or high risk**.  
 
-About the dataset
-The dataset used for this model is publicly available on Kaggle: https://www.kaggle.com/datasets/csafrit2/maternal-health-risk-data/data
+## 📂 About the Dataset  
+The dataset used for this model is publicly available on Kaggle:  
+🔗 [Maternal Health Risk Dataset](https://www.kaggle.com/datasets/csafrit2/maternal-health-risk-data/data)  
 
-The variables include:
+### **Key Vairables:**  
+- **Age** - This is age in years when a woman is pregnant. 
+- **SystolicBP** - The upper value of Blood Pressure in mmHg.
+- **DiastolicBP** - Lower value of Blood Pressure in mmHg.
+- **BS (Blood Sugar Level)** - Blood glucose levels in terms of molar concentration, mmol/L.  
+- **HeartRate** - A normal resting heart rate in beats per minute.
+- **Risk Level** - Predicted Risk Intensity Level during pregnancy considering the previous attributes. Categorized as either 'High Risk', 'Low Risk', or 'Mid Risk'.
 
-Age: Age in years when the woman is pregnant.
+## 🔍 Data Cleaning & Preprocessing  
+1. **Handling Missing and Duplicate Data**  
+   - No missing values were found in the dataset.  
+   - **562 duplicate rows** were identified and removed to enhance model accuracy.  
 
-SystolicBP: Upper value of blood pressure (in mmHg), a significant attribute during pregnancy.
+2. **Outlier Detection & Correction**  
+   - An unrealistic **HeartRate value of 7** was detected and replaced with the mode (**70 bpm**).  
 
-DiastolicBP: Lower value of blood pressure (in mmHg).
+3. **Encoding Categorical Variables**  
+   - The **Risk Level** variable was encoded as follows:  
+     - `2` → High Risk  
+     - `1` → Mid Risk  
+     - `0` → Low Risk  
 
-BS: Blood glucose levels measured in mmol/L.
+4. **Feature Correlation Analysis**  
+   - A **correlation heatmap** revealed that **Blood Sugar (BS)** had the strongest positive correlation with **Risk Level** (**0.55**).  
+   - **Age** and **HeartRate** showed weaker correlations but were retained as features.  
 
-HeartRate: Normal resting heart rate in beats per minute.
+5. **Handling Class Imbalance**  
+   - **Class distribution after dropping duplicate rows:**  
+     - **234** Low-Risk cases  
+     - **106** Mid-Risk cases  
+     - **112** High-Risk cases  
+   - The imbalance was addressed through data scaling and appropriate model selection.  
 
-Risk Level: Predicted risk intensity level during pregnancy (Low, Mid, High).
+6. **Data Splitting & Scaling**  
+   - The dataset was split into training and testing sets.  
+   - Feature values were scaled for improved model performance.  
 
-Data Cleaning and Preprocessing.
-The dataset was first loaded, and no missing values were found. However, 562 duplicate rows were identified and removed to ensure accurate model performance. Upon inspecting the data, an unrealistic HeartRate value of 7 was detected and replaced with the mode, 70.
-
-The RiskLevel variable was encoded as follows: 2 for "high risk" 1 for "mid risk" 0 for "low risk"
-
-A correlation heatmap revealed that Blood Sugar (BS) had the strongest positive correlation with RiskLevel (0.55), while Age and HeartRate had weaker correlations. Despite this, all the features were retained. There is a class imbalance (406 low-risk, 336 mid-risk, 272 high-risk). The data was split into training and testing sets and then scaled, making it ready for model training.
