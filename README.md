@@ -16,31 +16,31 @@ The dataset used for this model is publicly available on Kaggle:
 - **Risk Level** - Predicted Risk Intensity Level during pregnancy considering the previous attributes. Categorized as either 'High Risk', 'Low Risk', or 'Mid Risk'.
 
 ## 🔍 Data Cleaning & Preprocessing  
-1. **Handling Missing and Duplicate Data**  
+ **Handling Missing and Duplicate Data**  
    - No missing values were found in the dataset.  
    - 562 duplicate rows were identified and removed to enhance model accuracy.  
 
-2. **Outlier Detection & Correction**  
+ **Outlier Detection & Correction**  
    - An unrealistic HeartRate value of 7 was detected and replaced with the mode (70 bpm).  
 
-3. **Encoding Categorical Variables**  
+ **Encoding Categorical Variables**  
    - The Risk Level variable was encoded as follows:  
      - `2` → High Risk  
      - `1` → Mid Risk  
      - `0` → Low Risk  
 
-4. **Feature Correlation Analysis**  
+ **Feature Correlation Analysis**  
    - A correlation heatmap revealed that Blood Sugar (BS) had the strongest positive correlation with Risk Level (0.55).  
    - Age and HeartRate showed weaker correlations but were retained as features.  
 
-5. **Handling Class Imbalance**  
+ **Handling Class Imbalance**  
    - **Class distribution after dropping duplicate rows:**  
      - 234 Low-Risk cases  
      - 106 Mid-Risk cases  
      - 112 High-Risk cases  
    - The imbalance was addressed through data scaling and appropriate model selection.  
 
-6. **Data Splitting & Scaling**  
+ **Data Splitting & Scaling**  
    - The dataset was split into training and testing sets.  
    - Feature values were scaled for improved model performance.  
 
