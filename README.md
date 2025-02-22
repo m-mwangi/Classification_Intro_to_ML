@@ -209,3 +209,10 @@ Classification Report:
 | 2               | Adam          | L2 (0.001) | 150    | Yes (8 patience) | 3             | 0.001 (Reduces dynamically) | 0.1         | 32        |
 | 3               | SGD           | L2 (0.005) | 100    | Yes (5 patience) | 3             | 0.00001 (Reduces dynamically) | 0.1         | 64        |
 | 4               | RMSProp       | L2 (0.0001) | 150    | Yes (5 patience) | 3             | 0.0005       | 0.1         | 32        |
+
+
+### Summary of Findings
+- The Vanilla Neural Network Model had two hidden layers (32 and 16 neurons) with ReLU activation but lacked optimization techniques. It achieved a test accuracy of 64.71%, showing signs of underfitting and struggling with class imbalance, especially for Class 1 (recall of 12%).
+- The Adam Optimizer significantly improved performance, reaching 73.53% test accuracy. It used L2 regularization (0.001), dropout (0.1), dynamic learning rate, and early stopping. The model generalized better, but Class 1 recall remained relatively low (31%).
+- The SGD Optimizer performed best, achieving 76.47% test accuracy. It benefited from L2 regularization (0.005), a very small learning rate (0.00001), early stopping (patience 5), and a larger batch size (64). It had the highest recall for Class 1 (38%) and balanced performance across all classes.
+- The RMSProp Optimizer had the lowest test accuracy among optimized models (70.59%). Despite L2 regularization and a fixed learning rate (0.0005), it struggled with low recall for Class 1 (31%), showing less stability than SGD and Adam.
