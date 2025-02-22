@@ -2,6 +2,7 @@
 
 ##  Introduction  
 This project aims to develop and compare a vanilla Neural Network model to a model incorporating optimization techniques as well as Classical Algorithms to predict maternal health risk among pregnant women as either low, mid, or high risk.
+
 More information about my proposal can be found here:  https://docs.google.com/document/d/1xnnj8wq3rHsqiU6VgBP0DfMDTO1EZ9WXXSz1G3YgdLc/edit?usp=sharing
 
 ##  About the Dataset  
@@ -45,3 +46,4 @@ The dataset used for this model is publicly available on Kaggle:
    - The dataset was split into training and testing sets.  
    - Feature values were scaled for improved model performance.  
 
+## Building Model using Classical ML Algorithms
