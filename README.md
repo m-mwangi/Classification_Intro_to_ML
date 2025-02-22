@@ -179,3 +179,25 @@ Classification Report:
 |   Macro Avg  | 0.73 | 0.71 | 0.71 | 68 |
 |   Weighted Avg | 0.75 | 0.76 | 0.75 | 68 |
 
+
+#### c) Implementing RMSProp Optimizer
+Model Performance:
+
+| Metric               | Value  |
+|----------------------|--------|
+| Training Accuracy    | 0.7247 |
+| Validation Accuracy  | 0.7206 |
+| Test Accuracy        | 0.7059 |
+| Test Loss            | 0.6835 |
+
+Classification Report:
+
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| 0     | 0.75     | 0.86   | 0.80     | 35      |
+| 1     | 0.45     | 0.31   | 0.37     | 16      |
+| 2     | 0.76     | 0.76   | 0.76     | 17      |
+| Accuracy  |   |   | 0.71 | 68 |
+| Macro Avg | 0.66 | 0.64 | 0.65 | 68 |
+| Weighted Avg | 0.68 | 0.71 | 0.69 | 68 |
+
