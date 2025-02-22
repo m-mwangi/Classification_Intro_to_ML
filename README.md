@@ -92,12 +92,38 @@ Classification Report:
 
 
 ### Key Observations:
-- Both models achieve similar test accuracy (0.7353), but XGBoost has higher train and validation accuracy, indicating better training fit.
+- Both models achieve similar test accuracy (0.7353), but XGBoost has higher train and validation accuracy, indicating that it generalizes better.
 - Logistic Regression shows a larger gap between training (0.5853)and test accuracy (0.7353), which might indicate that it struggles to learn complex patterns but generalizes well.
 - Class-Wise Performance:
   - Class 0: Both models perform well.
   - Class 1: Both struggle, but Logistic Regression has a slightly better recall of 0.31 as compared to XGBoost with 0.25.
   - Class 2: Both models perform well.
 - Due to the imbalanced nature of the dataset, there is evidence of bias, as indicated by the two models finding it difficult to predict class 1.
+
+## Building Neural Network Models
+
+### **Vanilla Neural Network Model**
+This was a basic model with no optimization techniques. It consists of two hidden layers with ReLu activation(32 and 16 neurons, respectively). The output layer has a softmax activation function to handle multi-class classification.
+
+Model Performance:
+
+| Metric              | Value  |
+|---------------------|--------|
+| Training Accuracy   | 0.6551 |
+| Validation Accuracy | 0.6471 |
+| Test Accuracy       | 0.6471 |
+| Test Loss           | 0.7883 |
+
+Classification Report:
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| 0     | 0.64     | 0.91   | 0.75     | 35      |
+| 1     | 0.50     | 0.12   | 0.20     | 16      |
+| 2     | 0.71     | 0.59   | 0.65     | 17      |
+|   Accuracy     |  |  |   0.65   |   68   |
+|   Macro Avg    | 0.62 | 0.54 | 0.53 | 68 |
+|   Weighted Avg   | 0.63 | 0.65 | 0.60 | 68 |
+
+
 
 
