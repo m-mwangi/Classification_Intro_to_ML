@@ -11,7 +11,7 @@ In the project, I've developed and compared a vanilla Neural Network model to a 
 The dataset used for this model is publicly available on Kaggle:  
 🔗 [Maternal Health Risk Dataset](https://www.kaggle.com/datasets/csafrit2/maternal-health-risk-data/data)  
 
-### **Key Vairables:**  
+### **Key Variables:**  
 - **Age** - This is age in years when a woman is pregnant. 
 - **SystolicBP** - The upper value of Blood Pressure in mmHg.
 - **DiastolicBP** - Lower value of Blood Pressure in mmHg.
