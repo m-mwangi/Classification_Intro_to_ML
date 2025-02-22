@@ -1,9 +1,11 @@
 # **Maternal Health Risk Prediction (Matern_AI)**  
 
 ##  Introduction  
-This project aims to develop and compare a vanilla Neural Network model to a model incorporating optimization techniques as well as Classical Algorithms to predict maternal health risk among pregnant women as either low, mid, or high risk.
+Maternal health complications are key challenges in many developing African countries, contributing to high mortality rates from preventable conditions. I aim to build a model that will analyze key indicators such as body temperature, heart rate, blood pressure, age, etc to assess risk levels among pregnant women, enabling them receive timely interventions in healthcare facilities.
 
 More information about my proposal can be found here:  https://docs.google.com/document/d/1xnnj8wq3rHsqiU6VgBP0DfMDTO1EZ9WXXSz1G3YgdLc/edit?usp=sharing
+
+In the project, I've developed and compared a vanilla Neural Network model to a model incorporating optimization techniques as well as Classical ML Algorithms to predict maternal health risk as either low, mid, or high risk.
 
 ##  About the Dataset  
 The dataset used for this model is publicly available on Kaggle:  
