@@ -47,3 +47,37 @@ The dataset used for this model is publicly available on Kaggle:
    - Feature values were scaled for improved model performance.  
 
 ## Building Model using Classical ML Algorithms
+
+### **Logistic Regression (Baseline Model)**
+Best hyperparameters:
+- Applied SMOTE to handle class imbalance before training.
+- Defined the parameter grid (C and solver).
+- Performed 5-fold cross-validation (cv = 5) to evaluate each combination.
+- Selected the best model based on accuracy score.
+
+Classification Report:
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| 0     | 0.79     | 0.86   | 0.82     | 35      |
+| 1     | 0.56     | 0.31   | 0.40     | 16      |
+| 2     | 0.71     | 0.88   | 0.79     | 17      |
+| **Accuracy** |  |  | **0.74** | 68 |
+| **Macro Avg** | 0.69 | 0.68 | 0.67 | 68 |
+| **Weighted Avg** | 0.72 | 0.74 | 0.71 | 68 |
+
+### **XGBoost Classifier**
+Hyperparameters Tuned:
+- n_estimators (Number of Trees): [50, 100, 200] → Controls model complexity and training time.
+- max_depth (Tree Depth): [3, 5, 7] → Determines tree complexity, balancing underfitting and overfitting.
+- learning_rate (Step Size): [0.01, 0.1, 0.2] → Affects how quickly the model learns patterns.
+- subsample (Row Sampling): [0.7, 0.8, 1.0] → Introduces randomness to reduce overfitting.
+
+
+
+### Model Performance Comparison  
+
+| Model                | Train Accuracy| Validation Accuracy | Test Accuracy| Precision | Recall | F1 Score |
+|----------------------|---------------|---------------------|--------------|-----------|--------|----------|
+| Logistic Regression  | 0.5853        | 0.6324              | 0.7353       |   | **0.85** | **0.86** |
+| **XGBoost**         | **91.8%**     | **85.0%**            | **83.7%**    | **0.86**  | **0.84** | **0.85** |
+| **Logistic Regression** | **78.4%**     | **76.2%**            | **75.1%**    | **0.74**  | **0.75** | **0.74** |
