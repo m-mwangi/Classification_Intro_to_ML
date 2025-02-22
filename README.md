@@ -230,40 +230,25 @@ The choice of which model to use depends on whether a simpler model (XGBoost) or
 
 ## Running my Notebook and Accessing Saved Models
 - Open the notebook and run all the cells from the section titled "Dataset Loading" up to the "Data Preprocessing" section. This includes splitting the data and scaling it appropriately.
-- Once the preprocessing is complete, proceed to the section labeled "TESTING MY MODELS" and run the corresponding cell. This cell contains pre-written code to load the saved models and facilitate prediction.
+- Once the preprocessing is complete, proceed to the section labeled "TESTING MY MODELS" and run the corresponding cell. This cell contains pre-written code to load the saved models and facilitate prediction. For example, for our best model using SGD Optimizer:
   ```python
-import numpy as np
-from tensorflow.keras.models import load_model
-
-# Load the trained model
-sgd_model = load_model("maternal_health_sgd.keras")
-
-# Make predictions on the test set (raw probabilities)
-nn_probs = sgd_model.predict(X_test)
-
-# Convert to class labels
-if nn_probs.shape[1] > 1:
-    y_test_pred_nn_labels = nn_probs.argmax(axis=1)
-else:
-    y_test_pred_nn_labels = (nn_probs > 0.5).astype(int)
-
-# Print first 10 predictions
-print("Predictions (First 10):", y_test_pred_nn_labels[:10].flatten())
-- Ensure that both the model files and the dataset are uploaded to the appropriate directories for smooth execution.
-
-
-3. **Load and Use the Best Saved Model**:
-   - The best model (SGD-optimized Neural Network) is saved as `best_model.h5`.
-   - To load and use the model for predictions:
-     ```python
      from tensorflow.keras.models import load_model
      import numpy as np
      
-     model = load_model("best_model.h5")
-     sample_input = np.array([[value1, value2, ..., valueN]])  # Replace with actual feature values
-     prediction = model.predict(sample_input)
-     print("Predicted Class:", np.argmax(prediction))
+     model = load_model("maternal_health_sgd.keras")
+     nn_probs = sgd_model.predict(X_test)
+     if nn_probs.shape[1] > 1:
+        y_test_pred_nn_labels = nn_probs.argmax(axis=1)
+      else:
+          y_test_pred_nn_labels = (nn_probs > 0.5).astype(int)
+
+     print("Predictions (First 10):", y_test_pred_nn_labels[:10].flatten())
      ```
+  
+- Ensure that both the model files and the dataset are uploaded to the appropriate directories for smooth execution.
+
+
+
 
 ## Conclusion
 This project successfully demonstrates how machine learning and deep learning can be used for maternal health risk prediction. The optimized **SGD Neural Network** showed the best performance, making it the recommended model for deployment.
