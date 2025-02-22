@@ -247,10 +247,10 @@ The choice of which model to use depends on whether a simpler model (XGBoost) or
   
 - Ensure that both the model files and the dataset are uploaded to the appropriate directories for smooth execution.
 
-
-
-
 ## Conclusion
-This project successfully demonstrates how machine learning and deep learning can be used for maternal health risk prediction. The optimized **SGD Neural Network** showed the best performance, making it the recommended model for deployment.
+This project successfully demonstrates how machine learning can be used for maternal health risk prediction. The optimized **SGD Neural Network** showed the best performance, making it the recommended model for deployment.
+
+## Demo Video
+
 
 
