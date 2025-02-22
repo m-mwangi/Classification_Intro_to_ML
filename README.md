@@ -48,7 +48,7 @@ The dataset used for this model is publicly available on Kaggle:
 
 ## Building Model using Classical ML Algorithms
 
-### **Logistic Regression (Baseline Model)**
+### **Logistic Regression**
 Best hyperparameters:
 - Applied SMOTE to handle class imbalance before training.
 - Defined the parameter grid (C and solver).
@@ -61,9 +61,9 @@ Classification Report:
 | 0     | 0.79     | 0.86   | 0.82     | 35      |
 | 1     | 0.56     | 0.31   | 0.40     | 16      |
 | 2     | 0.71     | 0.88   | 0.79     | 17      |
-| **Accuracy** |  |  | **0.74** | 68 |
-| **Macro Avg** | 0.69 | 0.68 | 0.67 | 68 |
-| **Weighted Avg** | 0.72 | 0.74 | 0.71 | 68 |
+|   Accuracy   |  |  |    0.74 | 68 |
+|   Macro Avg   | 0.69 | 0.68 | 0.67 | 68 |
+|   Weighted Avg   | 0.72 | 0.74 | 0.71 | 68 |
 
 ### **XGBoost Classifier**
 Hyperparameters Tuned:
