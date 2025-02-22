@@ -1,9 +1,10 @@
 # **Maternal Health Risk Prediction (Matern_AI)**  
 
-## 📌 Introduction  
-This project aims to develop and compare a vanilla Neural Network model to a model incorporating optimization techniques as well as Classical Algorithms to predict maternal health risk among pregnant women as either low, mid, or high risk.  
+##  Introduction  
+This project aims to develop and compare a vanilla Neural Network model to a model incorporating optimization techniques as well as Classical Algorithms to predict maternal health risk among pregnant women as either low, mid, or high risk.
+More information about my proposal can be found here:  https://docs.google.com/document/d/1xnnj8wq3rHsqiU6VgBP0DfMDTO1EZ9WXXSz1G3YgdLc/edit?usp=sharing
 
-## 📂 About the Dataset  
+##  About the Dataset  
 The dataset used for this model is publicly available on Kaggle:  
 🔗 [Maternal Health Risk Dataset](https://www.kaggle.com/datasets/csafrit2/maternal-health-risk-data/data)  
 
@@ -15,7 +16,7 @@ The dataset used for this model is publicly available on Kaggle:
 - **HeartRate** - A normal resting heart rate in beats per minute.
 - **Risk Level** - Predicted Risk Intensity Level during pregnancy considering the previous attributes. Categorized as either 'High Risk', 'Low Risk', or 'Mid Risk'.
 
-## 🔍 Data Cleaning & Preprocessing  
+##  Data Cleaning & Preprocessing  
  **Handling Missing and Duplicate Data**  
    - No missing values were found in the dataset.  
    - 562 duplicate rows were identified and removed to enhance model accuracy.  
