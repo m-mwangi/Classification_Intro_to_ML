@@ -216,3 +216,12 @@ Classification Report:
 - The Adam Optimizer significantly improved performance, reaching 73.53% test accuracy. It used L2 regularization (0.001), dropout (0.1), dynamic learning rate, and early stopping. The model generalized better, but Class 1 recall remained relatively low (31%).
 - The SGD Optimizer performed best, achieving 76.47% test accuracy. It benefited from L2 regularization (0.005), a very small learning rate (0.00001), early stopping (patience 5), and a larger batch size (64). It had the highest recall for Class 1 (38%) and balanced performance across all classes.
 - The RMSProp Optimizer had the lowest test accuracy among optimized models (70.59%). Despite L2 regularization and a fixed learning rate (0.0005), it struggled with low recall for Class 1 (31%), showing less stability than SGD and Adam.
+- SGD was the best-performing optimizer, providing the highest accuracy and better recall for the minority class. However, class imbalance remains an issue.
+
+
+## Model Recommendation
+Among all models, the SGD-optimized Neural Network performed the best with 0.7647 test accuracy and the highest recall for Class 1 (0.38). 
+
+XGBoost was the best classical ML model, but it was slightly outperformed by the optimized neural network. 
+
+The choice of which model to use depends on whether a simpler model (XGBoost) or a more complex but better-performing model (SGD-optimized Neural Network) is preferred.
