@@ -136,7 +136,46 @@ To enhance the vanilla model’s performance, various optimization techniques we
 
 Below are the findings for using each optimizer and hyperparameter tuning, fit for the optimizer:
 
-#### a) Implementing Adam Optimizer ####
+#### a) Implementing Adam Optimizer
+Model Performance:
+
+| Metric               | Value  |
+|----------------------|--------|
+| Training Accuracy    | 0.7152 |
+| Validation Accuracy  | 0.7353 |
+| Test Accuracy        | 0.7353 |
+| Test Loss            | 0.6641 |
+
+Classification Report:
+
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+|  0    | 0.79     | 0.89   | 0.84     | 35      |
+|  1    | 0.50     | 0.31   | 0.38     | 16      |
+|  2  | 0.74     | 0.82   | 0.78     | 17      |
+|   Accuracy   |  |  |   0.74   | 68 |
+|   Macro Avg   | 0.68 | 0.67 | 0.67 | 68 |
+|   Weighted Avg   | 0.71 | 0.74 | 0.72 | 68 |
 
 
+#### b) Implementing SGD Optimizer
+Model Performance:
+
+| Metric             | Value  |
+|--------------------|------  |
+| Training Accuracy  | 0.7184 |
+| Validation Accuracy| 0.7059 |
+| Test Accuracy      | 0.7647 |
+| Test Loss          | 0.6865 |
+
+Classification Report:
+
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| 0     | 0.79     | 0.89   | 0.84     | 35      |
+| 1     | 0.60     | 0.38   | 0.46     | 16      |
+| 2     | 0.79     | 0.88   | 0.83     | 17      |
+|   Accuracy   |  |  |   0.76  | 68 |
+|   Macro Avg  | 0.73 | 0.71 | 0.71 | 68 |
+|   Weighted Avg | 0.75 | 0.76 | 0.75 | 68 |
 
