@@ -72,12 +72,20 @@ Hyperparameters Tuned:
 - learning_rate (Step Size): [0.01, 0.1, 0.2] → Affects how quickly the model learns patterns.
 - subsample (Row Sampling): [0.7, 0.8, 1.0] → Introduces randomness to reduce overfitting.
 
+Classification Report:
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+|  0    | 0.77     | 0.94   | 0.85     | 35      |
+|  1    | 0.50     | 0.25   | 0.33     | 16      |
+|  2    | 0.76     | 0.76   | 0.76     | 17      |
+|   Accuracy   |  |  |   0.74   | 68 |
+|   Macro Avg   | 0.68 | 0.65 | 0.65 | 68 |
+|   Weighted Avg   | 0.70 | 0.74 | 0.71 | 68 |
 
 
-### Model Performance Comparison  
+### Performance Comparison Between the 2 Models
 
-| Model                | Train Accuracy| Validation Accuracy | Test Accuracy| Precision | Recall | F1 Score |
-|----------------------|---------------|---------------------|--------------|-----------|--------|----------|
-| Logistic Regression  | 0.5853        | 0.6324              | 0.7353       |   | **0.85** | **0.86** |
-| **XGBoost**         | **91.8%**     | **85.0%**            | **83.7%**    | **0.86**  | **0.84** | **0.85** |
-| **Logistic Regression** | **78.4%**     | **76.2%**            | **75.1%**    | **0.74**  | **0.75** | **0.74** |
+| Model                | Train Accuracy | Validation Accuracy | Test Accuracy|
+|----------------------|--------------- |---------------------|--------------|
+| Logistic Regression  | 0.5853         | 0.6324              | 0.7353       |
+| XGBoost              | 0.7279         | 0.7647              | 0.7353       |
