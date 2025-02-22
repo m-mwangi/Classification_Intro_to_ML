@@ -125,5 +125,13 @@ Classification Report:
 |   Weighted Avg   | 0.63 | 0.65 | 0.60 | 68 |
 
 
+Key Observations:
+- The test accuracy is close to the validation accuracy, indicating that the model generalizes similarly on unseen data. However, the overall accuracy is not particularly high, suggesting room for improvement.
+- Class imbalance greatly affects the performance, especially in class 1.
+- There is potential underfitting and the model failing to capture complex patterns due to the low overall accuracy and poor recall for Class 1.
+- With optimization, performance may be improved.
+
+### **Optimized Neural Network Models**
+
 
 
