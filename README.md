@@ -134,7 +134,7 @@ Key Observations:
 ### **Optimized Neural Network Models**
 To enhance the vanilla model’s performance, various optimization techniques were applied. I used the three optimizers: Adam, SGD, and RMSProp. I also used L2 regularization, Early Stopping, Learning Rate, and Patience Value. These played a vital role in improving my model's performance. 
 
-Below are the findings for using each optimizer and hyperparameter tuning, fit for the optimizer:
+Below are the findings for using each optimizer:
 
 #### a) Implementing Adam Optimizer
 Model Performance:
@@ -201,3 +201,11 @@ Classification Report:
 | Macro Avg | 0.66 | 0.64 | 0.65 | 68 |
 | Weighted Avg | 0.68 | 0.71 | 0.69 | 68 |
 
+### Summary of Optimizer and Hyperparameter Tuning
+
+| Training Instance | Optimizer Used | Regularizer | Epochs | Early Stopping | Number of Layers | Learning Rate | Dropout Rate | Batch Size |
+|------------------|---------------|------------|--------|---------------|---------------|--------------|-------------|-----------|
+| 1               | Adam (default) | None       | 10     | No            | 3             | 0.001 (default) | None        | 32        |
+| 2               | Adam          | L2 (0.001) | 150    | Yes (8 patience) | 5             | 0.001 (Reduces dynamically) | 0.1         | 32        |
+| 3               | SGD           | L2 (0.005) | 100    | Yes (5 patience) | 3             | 0.00001 (Reduces dynamically) | 0.1         | 64        |
+| 4               | RMSProp       | L2 (0.0001) | 150    | Yes (5 patience) | 3             | 0.0005       | 0.1         | 32        |
