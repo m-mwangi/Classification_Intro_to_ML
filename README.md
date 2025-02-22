@@ -206,6 +206,6 @@ Classification Report:
 | Training Instance | Optimizer Used | Regularizer | Epochs | Early Stopping | Number of Layers | Learning Rate | Dropout Rate | Batch Size |
 |------------------|---------------|------------|--------|---------------|---------------|--------------|-------------|-----------|
 | 1               | Adam (default) | None       | 10     | No            | 3             | 0.001 (default) | None        | 32        |
-| 2               | Adam          | L2 (0.001) | 150    | Yes (8 patience) | 5             | 0.001 (Reduces dynamically) | 0.1         | 32        |
+| 2               | Adam          | L2 (0.001) | 150    | Yes (8 patience) | 3             | 0.001 (Reduces dynamically) | 0.1         | 32        |
 | 3               | SGD           | L2 (0.005) | 100    | Yes (5 patience) | 3             | 0.00001 (Reduces dynamically) | 0.1         | 64        |
 | 4               | RMSProp       | L2 (0.0001) | 150    | Yes (5 patience) | 3             | 0.0005       | 0.1         | 32        |
