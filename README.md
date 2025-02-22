@@ -89,3 +89,15 @@ Classification Report:
 |----------------------|--------------- |---------------------|--------------|
 | Logistic Regression  | 0.5853         | 0.6324              | 0.7353       |
 | XGBoost              | 0.7279         | 0.7647              | 0.7353       |
+
+
+### Key Observations:
+- Both models achieve similar test accuracy (0.7353), but XGBoost has higher train and validation accuracy, indicating better training fit.
+- Logistic Regression shows a larger gap between training (0.5853)and test accuracy (0.7353), which might indicate that it struggles to learn complex patterns but generalizes well.
+- Class-Wise Performance:
+  - Class 0: Both models perform well.
+  - Class 1: Both struggle, but Logistic Regression has a slightly better recall of 0.31 as compared to XGBoost with 0.25.
+  - Class 2: Both models perform well.
+- Due to the imbalanced nature of the dataset, there is evidence of bias, as indicated by the two models finding it difficult to predict class 1.
+
+
