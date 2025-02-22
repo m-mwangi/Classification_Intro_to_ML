@@ -132,6 +132,11 @@ Key Observations:
 - With optimization, performance may be improved.
 
 ### **Optimized Neural Network Models**
+To enhance the vanilla model’s performance, various optimization techniques were applied. I used the three optimizers: Adam, SGD, and RMSProp. I also used L2 regularization, Early Stopping, Learning Rate, and Patience Value. These played a vital role in improving my model's performance. 
+
+Below are the findings for using each optimizer and hyperparameter tuning, fit for the optimizer:
+
+#### a) Implementing Adam Optimizer ####
 
 
 
