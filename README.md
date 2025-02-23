@@ -247,9 +247,9 @@ nn_probs = sgd_model.predict(X_test)
 
 # Convert to class labels
 if nn_probs.shape[1] > 1:
-    y_test_pred_nn_labels = nn_probs.argmax(axis=1)  # Multiclass classification
+    y_test_pred_nn_labels = nn_probs.argmax(axis = 1)
 else:
-    y_test_pred_nn_labels = (nn_probs > 0.5).astype(int)  # Binary classification
+    y_test_pred_nn_labels = (nn_probs > 0.5).astype(int)
 
 # Convert numerical labels to class names
 y_test_pred_nn_names = [class_names[label] for label in y_test_pred_nn_labels]
