@@ -256,8 +256,11 @@ y_test_pred_nn_names = [class_names[label] for label in y_test_pred_nn_labels]
 
 # Print first 10 predictions with class names
 print("Predictions (First 10):", y_test_pred_nn_names[:10])
-
-  
+```
+Sample Output:
+```python
+Predictions (First 10): ['Medium Risk', 'Low Risk', 'Low Risk', 'Low Risk', 'Medium Risk', 'High Risk', 'Low Risk', 'Low Risk', 'Medium Risk', 'Low Risk']
+``` 
 - Ensure that both the model files and the dataset are uploaded to the appropriate directories for smooth execution.
 
 ## Conclusion
