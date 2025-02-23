@@ -111,20 +111,20 @@ Model Performance:
 
 | Metric              | Value  |
 |---------------------|--------|
-| Training Accuracy   | 0.6551 |
-| Validation Accuracy | 0.6471 |
-| Test Accuracy       | 0.6471 |
-| Test Loss           | 0.7883 |
+| Training Accuracy   | 0.6361 |
+| Validation Accuracy | 0.6618 |
+| Test Accuracy       | 0.6765 |
+| Test Loss           | 0.8253 |
 
 Classification Report:
 | Class | Precision | Recall | F1-Score | Support |
 |-------|-----------|--------|----------|---------|
-| 0     | 0.64     | 0.91   | 0.75     | 35      |
+| 0     | 0.64     | 0.97   | 0.77     | 35      |
 | 1     | 0.50     | 0.12   | 0.20     | 16      |
-| 2     | 0.71     | 0.59   | 0.65     | 17      |
+| 2     | 0.91     | 0.59   | 0.71     | 17      |
 |   Accuracy     |  |  |   0.65   |   68   |
-|   Macro Avg    | 0.62 | 0.54 | 0.53 | 68 |
-|   Weighted Avg   | 0.63 | 0.65 | 0.60 | 68 |
+|   Macro Avg    | 0.68 | 0.56 | 0.56 | 68 |
+|   Weighted Avg   | 0.68 | 0.68 | 0.62 | 68 |
 
 
 Key Observations:
@@ -144,20 +144,20 @@ Model Performance:
 | Metric               | Value  |
 |----------------------|--------|
 | Training Accuracy    | 0.7152 |
-| Validation Accuracy  | 0.7353 |
+| Validation Accuracy  | 0.7059 |
 | Test Accuracy        | 0.7353 |
-| Test Loss            | 0.6641 |
+| Test Loss            | 0.6958 |
 
 Classification Report:
 
 | Class | Precision | Recall | F1-Score | Support |
 |-------|-----------|--------|----------|---------|
-|  0    | 0.79     | 0.89   | 0.84     | 35      |
-|  1    | 0.50     | 0.31   | 0.38     | 16      |
-|  2  | 0.74     | 0.82   | 0.78     | 17      |
+|  0    | 0.76     | 0.89   | 0.82     | 35      |
+|  1    | 0.67     | 0.25   | 0.36     | 16      |
+|  2  | 0.71     | 0.88   | 0.79     | 17      |
 |   Accuracy   |  |  |   0.74   | 68 |
-|   Macro Avg   | 0.68 | 0.67 | 0.67 | 68 |
-|   Weighted Avg   | 0.71 | 0.74 | 0.72 | 68 |
+|   Macro Avg   | 0.71 | 0.67 | 0.66 | 68 |
+|   Weighted Avg   | 0.72 | 0.74 | 0.70 | 68 |
 
 
 #### b) Implementing SGD Optimizer
