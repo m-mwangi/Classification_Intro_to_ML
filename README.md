@@ -222,7 +222,7 @@ Classification Report:
 
 
 ## Model Recommendation
-Among all models, the **SGD-optimized Neural Network** performed the best with 0.7500 test accuracy and the highest recall for Class 1 (0.31). 
+Among all models, the **SGD-optimized Neural Network** performed the best (0.7500) test accuracy and the highest recall for Class 1 (0.31). 
 
 **XGBoost** was the best classical ML model (0.7353) but it was slightly outperformed by the optimized SGD neural network. 
 
