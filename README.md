@@ -267,4 +267,4 @@ Predictions (First 10): ['Medium Risk', 'Low Risk', 'Low Risk', 'Low Risk', 'Med
 This project successfully demonstrates how machine learning can be used for maternal health risk prediction. The optimized **SGD Neural Network** showed the best performance, making it the recommended model for deployment.
 
 ## Demo Video
-https://youtu.be/QHtpgDP0OaM
+https://youtu.be/khWaCkCHvg0
