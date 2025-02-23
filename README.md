@@ -231,8 +231,9 @@ The choice of which model to use depends on whether a simpler model (XGBoost) or
 ## Running my Notebook and Accessing Saved Models
 - Open the notebook and run all the cells from the section titled "Dataset Loading" up to the "Data Preprocessing" section. This includes splitting the data and scaling it appropriately.
 - Once the preprocessing is complete, proceed to the section labeled "TESTING MY MODELS" and run the corresponding cell. This cell contains pre-written code to load the saved models and facilitate prediction. For example, for our best model using SGD Optimizer:
-  ```python
-     import numpy as np
+  
+```python
+import numpy as np
 from tensorflow.keras.models import load_model
 
 # Define class names corresponding to numerical labels
@@ -246,16 +247,16 @@ nn_probs = sgd_model.predict(X_test)
 
 # Convert to class labels
 if nn_probs.shape[1] > 1:
-    y_test_pred_nn_labels = nn_probs.argmax(axis = 1)
+    y_test_pred_nn_labels = nn_probs.argmax(axis=1)  # Multiclass classification
 else:
-    y_test_pred_nn_labels = (nn_probs > 0.5).astype(int)
+    y_test_pred_nn_labels = (nn_probs > 0.5).astype(int)  # Binary classification
 
 # Convert numerical labels to class names
 y_test_pred_nn_names = [class_names[label] for label in y_test_pred_nn_labels]
 
 # Print first 10 predictions with class names
 print("Predictions (First 10):", y_test_pred_nn_names[:10])
-     ```
+
   
 - Ensure that both the model files and the dataset are uploaded to the appropriate directories for smooth execution.
 
