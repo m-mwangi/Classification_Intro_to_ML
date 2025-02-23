@@ -165,21 +165,21 @@ Model Performance:
 
 | Metric             | Value  |
 |--------------------|------  |
-| Training Accuracy  | 0.7184 |
+| Training Accuracy  | 0.7057 |
 | Validation Accuracy| 0.7059 |
-| Test Accuracy      | 0.7647 |
-| Test Loss          | 0.6865 |
+| Test Accuracy      | 0.7500 |
+| Test Loss          | 0.6820 |
 
 Classification Report:
 
 | Class | Precision | Recall | F1-Score | Support |
 |-------|-----------|--------|----------|---------|
-| 0     | 0.79     | 0.89   | 0.84     | 35      |
-| 1     | 0.60     | 0.38   | 0.46     | 16      |
-| 2     | 0.79     | 0.88   | 0.83     | 17      |
-|   Accuracy   |  |  |   0.76  | 68 |
-|   Macro Avg  | 0.73 | 0.71 | 0.71 | 68 |
-|   Weighted Avg | 0.75 | 0.76 | 0.75 | 68 |
+| 0     | 0.76     | 0.91   | 0.83     | 35      |
+| 1     | 0.62     | 0.31   | 0.42     | 16      |
+| 2     | 0.78     | 0.82   | 0.80     | 17      |
+|   Accuracy   |  |  |   0.75  | 68 |
+|   Macro Avg  | 0.72 | 0.68 | 0.68 | 68 |
+|   Weighted Avg | 0.73 | 0.75 | 0.73 | 68 |
 
 
 #### c) Implementing RMSProp Optimizer
@@ -187,21 +187,21 @@ Model Performance:
 
 | Metric               | Value  |
 |----------------------|--------|
-| Training Accuracy    | 0.7247 |
-| Validation Accuracy  | 0.7206 |
-| Test Accuracy        | 0.7059 |
-| Test Loss            | 0.6835 |
+| Training Accuracy    | 0.7278 |
+| Validation Accuracy  | 0.7647 |
+| Test Accuracy        | 0.7206 |
+| Test Loss            | 0.6804 |
 
 Classification Report:
 
 | Class | Precision | Recall | F1-Score | Support |
 |-------|-----------|--------|----------|---------|
-| 0     | 0.75     | 0.86   | 0.80     | 35      |
-| 1     | 0.45     | 0.31   | 0.37     | 16      |
-| 2     | 0.76     | 0.76   | 0.76     | 17      |
-| Accuracy  |   |   | 0.71 | 68 |
-| Macro Avg | 0.66 | 0.64 | 0.65 | 68 |
-| Weighted Avg | 0.68 | 0.71 | 0.69 | 68 |
+| 0     | 0.79     | 0.89   | 0.84     | 35      |
+| 1     | 0.57     | 0.25   | 0.35     | 16      |
+| 2     | 0.64     | 0.82   | 0.72     | 17      |
+| Accuracy  |   |   | 0.72 | 68 |
+| Macro Avg | 0.67 | 0.65 | 0.63 | 68 |
+| Weighted Avg | 0.70 | 0.72 | 0.69 | 68 |
 
 ### Summary of Optimizer and Hyperparameter Tuning
 
@@ -214,17 +214,17 @@ Classification Report:
 
 
 ### Summary of Findings
-- The Vanilla Neural Network Model had two hidden layers (32 and 16 neurons) with ReLU activation but lacked optimization techniques. It achieved a test accuracy of 64.71%, showing signs of underfitting and struggling with class imbalance, especially for Class 1 (recall of 12%).
-- The Adam Optimizer significantly improved performance, reaching 73.53% test accuracy. It used L2 regularization (0.001), dropout (0.1), dynamic learning rate, and early stopping. The model generalized better, but Class 1 recall remained relatively low (31%).
-- The SGD Optimizer performed best, achieving 76.47% test accuracy. It benefited from L2 regularization (0.005), a very small learning rate (0.00001), early stopping (patience 5), and a larger batch size (64). It had the highest recall for Class 1 (38%) and balanced performance across all classes.
-- The RMSProp Optimizer had the lowest test accuracy among optimized models (70.59%). Despite L2 regularization and a fixed learning rate (0.0005), it struggled with low recall for Class 1 (31%), showing less stability than SGD and Adam.
+- The Vanilla Neural Network Model had two hidden layers (32 and 16 neurons) with ReLU activation but lacked optimization techniques. It achieved a test accuracy of 0.6765, showing signs of underfitting and struggling with class imbalance, especially for Class 1 (recall of 0.12).
+- The Adam Optimizer significantly improved performance, reaching 0.7353 test accuracy. It used L2 regularization (0.001), dropout (0.1), dynamic learning rate, and early stopping. The model generalized better, but Class 1 recall remained relatively low (0.25).
+- The SGD Optimizer performed best, achieving 0.7500 test accuracy. It benefited from L2 regularization (0.005), a very small learning rate (0.00001), early stopping (patience 5), and a larger batch size (64). It had the highest recall for Class 1 (0.31) and balanced performance across all classes.
+- The RMSProp Optimizer had the lowest test accuracy among optimized models (0.7206). Despite L2 regularization and a fixed learning rate (0.0005), it struggled with low recall for Class 1 (0.25), showing less stability than SGD and Adam.
 - SGD was the best-performing optimizer, providing the highest accuracy and better recall for the minority class. However, class imbalance remains an issue.
 
 
 ## Model Recommendation
-Among all models, the **SGD-optimized Neural Network** performed the best with 0.7647 test accuracy and the highest recall for Class 1 (0.38). 
+Among all models, the **SGD-optimized Neural Network** performed the best with 0.7500 test accuracy and the highest recall for Class 1 (0.31). 
 
-**XGBoost** was the best classical ML model, but it was slightly outperformed by the optimized neural network. 
+**XGBoost** was the best classical ML model (0.7353) but it was slightly outperformed by the optimized SGD neural network. 
 
 The choice of which model to use depends on whether a simpler model (XGBoost) or a more complex but better-performing model (SGD-optimized Neural Network) is preferred.
 
@@ -232,17 +232,29 @@ The choice of which model to use depends on whether a simpler model (XGBoost) or
 - Open the notebook and run all the cells from the section titled "Dataset Loading" up to the "Data Preprocessing" section. This includes splitting the data and scaling it appropriately.
 - Once the preprocessing is complete, proceed to the section labeled "TESTING MY MODELS" and run the corresponding cell. This cell contains pre-written code to load the saved models and facilitate prediction. For example, for our best model using SGD Optimizer:
   ```python
-     from tensorflow.keras.models import load_model
      import numpy as np
-     
-     model = load_model("maternal_health_sgd.keras")
-     nn_probs = sgd_model.predict(X_test)
-     if nn_probs.shape[1] > 1:
-        y_test_pred_nn_labels = nn_probs.argmax(axis=1)
-      else:
-          y_test_pred_nn_labels = (nn_probs > 0.5).astype(int)
+from tensorflow.keras.models import load_model
 
-     print("Predictions (First 10):", y_test_pred_nn_labels[:10].flatten())
+# Define class names corresponding to numerical labels
+class_names = ["Low Risk", "Medium Risk", "High Risk"]
+
+# Load the trained model
+sgd_model = load_model("maternal_health_sgd.keras")
+
+# Make predictions on the test set (raw probabilities)
+nn_probs = sgd_model.predict(X_test)
+
+# Convert to class labels
+if nn_probs.shape[1] > 1:
+    y_test_pred_nn_labels = nn_probs.argmax(axis = 1)
+else:
+    y_test_pred_nn_labels = (nn_probs > 0.5).astype(int)
+
+# Convert numerical labels to class names
+y_test_pred_nn_names = [class_names[label] for label in y_test_pred_nn_labels]
+
+# Print first 10 predictions with class names
+print("Predictions (First 10):", y_test_pred_nn_names[:10])
      ```
   
 - Ensure that both the model files and the dataset are uploaded to the appropriate directories for smooth execution.
